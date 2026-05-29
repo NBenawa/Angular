@@ -1,9 +1,22 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-listing-data-form',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './listing-data-form.html',
   styleUrl: './listing-data-form.css',
 })
-export class ListingDataForm {}
+export class ListingDataForm {
+  name: string = '';
+  description: string = ''
+  price: string = '';
+
+  constructor(private router: Router) {}
+
+  createListing() {
+    alert('Listing created!'); // Placeholder for actual implementation
+    this.router.navigate(['/my-listings']);
+  }
+}
