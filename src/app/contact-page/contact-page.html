@@ -1,1 +1,14 @@
-<p>contact-page works!</p>
+<div class="content box">
+    <h3>Send the owner a message!</h3>
+    <div>
+        <label for="email">Your Email:
+            <input name="email" [(ngModel)]="email" type="email" placeholder="your.email@example.com" />
+        </label>
+    </div>
+    <div>
+        <label for="message">Your Message:
+            <textarea name="message" [(ngModel)]="message" placeholder="I am interested in your listing!" rows="4" cols="20"></textarea>
+        </label>
+    </div>
+    <button (click)="sendMessage()">Send Message</button>
+</div>
