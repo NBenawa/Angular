@@ -1,4 +1,9 @@
 <div class="content-box">
     <h2>Edit Listing</h2>
-    <app-listing-data-form submitButtonText="Update Listing" (sendEventToParent)="updateListing()"></app-listing-data-form>
+    <app-listing-data-form 
+    [currentName]="listing.name"
+    [currentDescription]="listing.description"
+    [currentPrice]="listing.price"
+    submitButtonText="Update Listing" 
+    (sendEventToParent)="updateListing()"></app-listing-data-form>
 </div>

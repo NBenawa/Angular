@@ -11,6 +11,10 @@ import { Listing } from '../types';
 })
 export class ListingDataForm {
   @Input() submitButtonText!: string;
+  @Input() currentName: string = '';
+  @Input() currentDescription: string = '';
+  @Input() currentPrice: number = 0;
+
   @Output() sendEventToParent = new EventEmitter<Listing>();
 
   name: string = '';
@@ -26,5 +30,11 @@ export class ListingDataForm {
       description: this.description,
       price: Number(this.price)
     });
+  }
+
+  ngOnInit() {
+    this.name = this.currentName;
+    this.description = this.currentDescription;
+    this.price = this.currentPrice.toString();
   }
 }

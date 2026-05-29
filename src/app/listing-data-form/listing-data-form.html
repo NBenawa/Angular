@@ -1,7 +1,7 @@
 <form (ngSubmit)="createListing()">
     <div class="form-group">
-        <label for="title">Name: </label>
-        <input type="text" id="title" [(ngModel)]="name" name="title">
+        <label for="name">Name: </label>
+        <input type="text" id="name" [(ngModel)]="name" name="name">
     </div>
     <div class="form-group">
         <label for="description">Description: </label>
@@ -9,7 +9,7 @@
     </div>
     <div class="form-group">
         <label for="price">Price: </label>
-        <input type="text" id="price" [(ngModel)]="price" name="price">
+        <input type="number" id="price" [(ngModel)]="price" name="price">
     </div>
     <button type="submit" >{{ submitButtonText }}</button>
 </form>
