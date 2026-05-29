@@ -1,1 +1,18 @@
-<p>new-listing-page works!</p>
+<div class="content-box">
+    <h2>Create New Listing</h2>
+    <form (ngSubmit)="createListing()">
+        <div class="form-group">
+            <label for="title">Name:</label>
+            <input type="text" id="title" [(ngModel)]="name" name="title">
+        </div>
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea id="description" [(ngModel)]="description" name="description"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="text" id="price" [(ngModel)]="price" name="price">
+        </div>
+        <button type="submit">Create Listing</button>
+    </form>
+</div>
