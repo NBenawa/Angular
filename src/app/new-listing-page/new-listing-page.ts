@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ListingDataForm } from '../listing-data-form/listing-data-form';
+
 @Component({
   selector: 'app-new-listing-page',
   imports: [ListingDataForm],
