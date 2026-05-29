@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './listing-data-form.css',
 })
 export class ListingDataForm {
+  @Input() submitButtonText!: string;
   name: string = '';
   description: string = ''
   price: string = '';
